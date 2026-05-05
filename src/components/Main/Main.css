@@ -1,0 +1,68 @@
+.main {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px 30px 10px;
+}
+
+.ingredient{
+    margin-right: 10px;
+    border: #D1D5DB solid 1px;
+    padding: 7px;
+    width:55%;
+    border-radius: 5px;
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 400px;
+}
+button{
+    color: white;
+    background-color: #141413;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    width:20%;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 0 10px;
+    }
+    
+    .ingredient {
+        width: 60%;
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    button {
+        width: 35%;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main {
+        padding: 0 10px;
+    }
+    
+    .ingredient {
+        width: 55%;
+        font-size: 13px;
+        padding: 8px 6px;
+        margin-right: 5px;
+        min-width: 120px;
+    }
+    
+    button {
+        width: 38%;
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+    
+    button span {
+        margin-right: 3px;
+    }
+}
+
