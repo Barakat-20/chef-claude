@@ -31,13 +31,13 @@ export default function Main() {
         <h2>Ingredients on hand:</h2>
         <ul className="ingredientsList">{ingredientsListItems}</ul>
 
-        <div className="recipeContainer">
+        {ingredients.length > 3  && <div className="recipeContainer">
           <div>
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
           </div>
           <button className="getRecipe">Get a recipe</button>
-        </div>
+        </div>}
       </section>
 }
 
