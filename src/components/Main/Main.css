@@ -4,6 +4,16 @@
     padding: 30px 30px 10px;
 }
 
+.main h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.ingredientsList {
+    margin-top: 10px;
+    margin-bottom: 48px;
+    text-align: left;
+}
 .ingredient{
     margin-right: 10px;
     border: #D1D5DB solid 1px;
@@ -14,7 +24,7 @@
     min-width: 150px;
     max-width: 400px;
 }
-button{
+.addIngredient{
     color: white;
     background-color: #141413;
     padding: 7px;
@@ -22,6 +32,59 @@ button{
     border-radius: 5px;
     width:20%;
     white-space: nowrap;
+}
+
+.ingredientsList > li{
+    color: #475467;
+    line-height: 28px;
+}
+
+.main h2 {
+    text-align: left;
+    padding: 0 10px;
+}
+
+.recipeContainer {
+    background-color: #F0EFEB;
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    gap: 20px;
+}
+
+.recipeContainer h3 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 8px 0;
+}
+
+.recipeContainer p {
+    margin: 0;
+    white-space: normal;
+    color: #6B7280;
+}
+
+.getRecipe {
+    background-color: #D17557;
+    min-width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Inter, sans-serif;
+    transition: background-color 0.2s;
+}
+
+.getRecipe:hover {
+    background-color: rgba(203, 74, 27, 0.9);
 }
 
 @media (max-width: 768px) {
@@ -35,10 +98,22 @@ button{
         padding: 8px;
     }
     
-    button {
+    .addIngredient {
         width: 35%;
         font-size: 14px;
         padding: 8px;
+    }
+    
+    .recipeContainer {
+        width: 90%;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .getRecipe {
+        min-width: 90px;
+        height: 45px;
+        font-size: 14px;
     }
 }
 
@@ -55,14 +130,20 @@ button{
         min-width: 120px;
     }
     
-    button {
+    .addIngredient {
         width: 38%;
         font-size: 12px;
         padding: 8px 4px;
     }
     
-    button span {
+    .addIngredient span {
         margin-right: 3px;
     }
-}
 
+    .recipeContainer h3 {
+        font-size: 20px;
+    }
+    .recipeContainer p{
+        font-size: 15px;
+    }
+}
