@@ -2,6 +2,7 @@ import React from "react"
 import './Main.css'
 import IngredientsListItems from "../IngredientsListItems.jsx"
 import Recipe from "../Recipe.jsx"
+import { getRecipeFromMistral } from "../../ai.js";
 
 export default function Main() {
 
