@@ -6,12 +6,13 @@ import { getRecipeFromMistral } from "../../ai.js";
 
 export default function Main() {
 
-  const [ingredients, setIngredients] = React.useState([])
+  const [ingredients, setIngredients] = React.useState(["flour", "butter", "egg", "milk"])
 
   const [recipeShown, setRecipeShown] = React.useState(false)
 
-    function showRecipe() {
-        setRecipeShown(prevShown => !prevShown)
+    async function getRecipe() {
+      const generatedRecipeIdea = getRecipeFromMistral(ingredients)
+      console.log(generatedRecipeIdea)
     }
 
   function addIngredient(formData) {
@@ -34,7 +35,7 @@ export default function Main() {
 
       {ingredients.length > 0 && <IngredientsListItems 
       ingredients={ingredients} 
-      showRecipe={showRecipe}/>}
+      getRecipe={getRecipe} />}
 
       {recipeShown && <Recipe />}
     </main>
