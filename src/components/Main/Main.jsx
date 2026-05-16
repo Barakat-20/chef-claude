@@ -8,11 +8,11 @@ export default function Main() {
 
   const [ingredients, setIngredients] = React.useState(["flour", "butter", "egg", "milk"])
 
-  const [recipeShown, setRecipeShown] = React.useState(false)
+  const [recipe, setRecipe] = React.useState("")
 
     async function getRecipe() {
       const generatedRecipeIdea = getRecipeFromMistral(ingredients)
-      console.log(generatedRecipeIdea)
+      setRecipe(generatedRecipeIdea)
     }
 
   function addIngredient(formData) {
@@ -37,7 +37,7 @@ export default function Main() {
       ingredients={ingredients} 
       getRecipe={getRecipe} />}
 
-      {recipeShown && <Recipe />}
+      {recipe && <Recipe recipe={recipe}/>}
     </main>
   )
 }

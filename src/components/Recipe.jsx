@@ -1,7 +1,7 @@
-export default function Recipe() {
+export default function Recipe(props) {
     return(
         <section>
-            <h1>hello</h1>
+            {props.recipe}
         </section>
     )
 }
