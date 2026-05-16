@@ -11,7 +11,7 @@ export default function Main() {
   const [recipe, setRecipe] = React.useState("")
 
     async function getRecipe() {
-      const generatedRecipeIdea = getRecipeFromMistral(ingredients)
+      const generatedRecipeIdea = await getRecipeFromMistral(ingredients)
       setRecipe(generatedRecipeIdea)
     }
 

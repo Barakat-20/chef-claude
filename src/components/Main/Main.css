@@ -86,6 +86,21 @@
 .getRecipe:hover {
     background-color: rgba(203, 74, 27, 0.9);
 }
+.recipe h2 {
+    color:black
+}
+.recipe {
+    text-align: left;
+    margin-left: 20px;
+    color: #475467;
+    line-height: 28px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.recipe ul li, .recipe ol li {
+    margin-bottom: 8px;
+}
 
 @media (max-width: 768px) {
     .main {
